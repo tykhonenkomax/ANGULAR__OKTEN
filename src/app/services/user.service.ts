@@ -11,7 +11,7 @@ import {HttpClient} from "@angular/common/http";
 export class UserService {
 
   constructor(private userService:HttpClient) { }
-  getUser(id:number):Observable<IUser>{
+  getUser(id:string):Observable<IUser>{
     return this.userService.get<IUser>(urls.users + '/'+ id)
   }
 }
