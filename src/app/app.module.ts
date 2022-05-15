@@ -9,6 +9,9 @@ import { PostComponent } from './components/post/post.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { CommentComponent } from './components/comment/comment.component';
 import {HttpClientModule} from "@angular/common/http";
+import { UserDetailsComponent } from './components/user-details/user-details.component';
+import {RouterModule} from "@angular/router";
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,19 @@ import {HttpClientModule} from "@angular/common/http";
     PostsComponent,
     PostComponent,
     CommentsComponent,
-    CommentComponent
+    CommentComponent,
+    HomeComponent
   ],
+
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      {path: 'home-page', component: HomeComponent},
+      {path: 'user', component: UserComponent},
+      {path: 'user-details/:id', component: UserDetailsComponent},
+    ])
+
   ],
   providers: [],
   bootstrap: [AppComponent]

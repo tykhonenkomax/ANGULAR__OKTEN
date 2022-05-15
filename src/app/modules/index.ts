@@ -1,4 +1,4 @@
-export * from './IUser'
-export * from './IPost'
-export * from './IComment'
+export * from './IUsers'
+export * from './IPosts'
+export * from './IComments'
 export * from './IAddress'
