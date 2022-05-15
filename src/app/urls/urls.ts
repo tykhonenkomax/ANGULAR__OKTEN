@@ -5,7 +5,7 @@ let {API: baseURL} = environment;
 
 export const urls = {
 
-users:'./users',
-posts:'./posts',
-comments:'./comments'
+  users:`${baseURL}/users`,
+posts:`${baseURL}/posts`,
+comments:`${baseURL}/comments`
 }
