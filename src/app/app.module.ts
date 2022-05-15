@@ -30,7 +30,7 @@ import { HomeComponent } from './components/home/home.component';
     HttpClientModule,
     RouterModule.forRoot([
       {path: 'home-page', component: HomeComponent},
-      {path: 'user', component: UserComponent},
+      {path: 'user-details', component: UsersComponent},
       {path: 'user-details/:id', component: UserDetailsComponent},
     ])
 
