@@ -10,7 +10,7 @@ import {urls} from "../urls";
 export class PostService {
 
   constructor(private httpClient:HttpClient) { }
-  getAll():Observable<IPosts[]>{
+  getAll(id:string):Observable<IPosts[]>{
     return this.httpClient.get<IPosts[]>(urls.posts)
   }
 }

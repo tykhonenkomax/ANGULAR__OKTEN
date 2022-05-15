@@ -11,7 +11,8 @@ import { CommentComponent } from './components/comment/comment.component';
 import {HttpClientModule} from "@angular/common/http";
 import {RouterModule} from "@angular/router";
 import { HomeComponent } from './components/home/home.component';
-import {UserDetailsComponent} from "./components/user-details/user-details.component";
+import {UserDetailsComponent} from "./components/userDetails/user-details.component";
+import { PostDetailsComponent } from './components/postDetails/post-details.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {UserDetailsComponent} from "./components/user-details/user-details.compo
     CommentsComponent,
     CommentComponent,
     HomeComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    PostDetailsComponent
   ],
 
   imports: [
@@ -32,15 +34,22 @@ import {UserDetailsComponent} from "./components/user-details/user-details.compo
     RouterModule.forRoot([
       {path: 'home-page', component: HomeComponent},
       {path: 'user-details', component: UsersComponent,
-      children:[
+      children:
+        [
         {path:'user-details/:id',component:UserDetailsComponent}
-      ]
-      }
+        ]
+      },
+
+      {path:'post-details',component:PostsComponent,
+      children:
+        [
+          {path:'post-details/:id',component: PostDetailsComponent}
+        ]
+      },
+
 
         ])
 
-
-    // {path: 'user-details/:id', component: UserDetailsComponent},
   ],
   providers: [],
   bootstrap: [AppComponent]
