@@ -5,6 +5,8 @@ import {PostService} from "../../services";
 import {IPost} from "../../modules/IPost";
 
 
+
+
 @Component({
   selector: 'app-post-details',
   templateUrl: './post-details.component.html',
