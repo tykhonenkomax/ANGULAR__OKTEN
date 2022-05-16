@@ -13,6 +13,7 @@ import {RouterModule} from "@angular/router";
 import { HomeComponent } from './components/home/home.component';
 import {UserDetailsComponent} from "./components/userDetails/user-details.component";
 import { PostDetailsComponent } from './components/postDetails/post-details.component';
+import {CommentDetailsComponent} from "./components/commentDetails/comment-details.component";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PostDetailsComponent } from './components/postDetails/post-details.comp
     CommentComponent,
     HomeComponent,
     UserDetailsComponent,
-    PostDetailsComponent
+    PostDetailsComponent,
+    CommentDetailsComponent
   ],
 
   imports: [
@@ -46,6 +48,12 @@ import { PostDetailsComponent } from './components/postDetails/post-details.comp
           {path:'post-details/:id',component: PostDetailsComponent}
         ]
       },
+      {path:'comment-details',component:CommentsComponent,
+      children:
+        [
+          {path: 'comment-details/:id',component: CommentDetailsComponent }
+        ]
+      }
 
 
         ])

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable, Subscriber} from "rxjs";
+import {Observable} from "rxjs";
 import {IPost} from "../modules/IPost";
 import {urls} from "../urls";
 
