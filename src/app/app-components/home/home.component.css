@@ -1,0 +1,9 @@
+.homeWallpaper{
+
+  height: 200px;
+}
+.infoPage{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
