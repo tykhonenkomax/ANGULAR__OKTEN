@@ -1,1 +1,12 @@
-<p>comment works!</p>
+<div>
+  <div><strong>ID:</strong>{{comment.id}}</div>
+  <div><strong>NAME:</strong>{{comment.name}}</div>
+  <div><strong>BODY:</strong>{{comment.body}}</div>
+  <div><strong>EMAIL:</strong>{{comment.email}}</div>
+  <a routerLink="{{comment.id}}" [state]="comment">
+  <div>Get Details</div>
+  </a>
+  <hr>
+
+
+</div>

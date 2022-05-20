@@ -1,1 +1,9 @@
-<p>post works!</p>
+<div routerLinkActive="active">
+  <div><strong>ID:</strong> {{post.id}}</div>
+<strong>POST:</strong> {{post.body}}
+  <div><strong>TITLE:</strong> {{post.title}}</div>
+  <a routerLink="{{post.id}}" [state]="{post}">
+    <div>Get Details</div>
+  </a>
+  <hr>
+</div>
