@@ -15,6 +15,6 @@ export class UsersService {
   }
 
   getById(id:string):Observable<IUsers>{
-    return this.http.get<IUsers>(urls.users+'/'+'id')
+    return this.http.get<IUsers>(`${urls.users}/${id}`)
   }
 }
