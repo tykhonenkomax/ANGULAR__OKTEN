@@ -9,11 +9,12 @@ import {IPost} from "../../interfaces";
 })
 export class PostsComponent implements OnInit {
 
-  post:IPost[];
+  posts:IPost[];
+
   constructor(private postService:PostService) { }
 
   ngOnInit(): void {
-    this.postService.getAll().subscribe(value => this.post=value)
+    this.postService.getAll().subscribe(value => this.posts=value)
   }
 
 }
