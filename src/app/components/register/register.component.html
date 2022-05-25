@@ -2,5 +2,7 @@
   <div><label>username: <input type="text" formControlName="username"></label></div>
   <div><label>password: <input type="text" formControlName="password"></label></div>
   <div><label>confirmPassword: <input type="text" formControlName="confirmPassword"></label></div>
+ <span *ngIf="form.errors">{{form.errors['notSame']}}</span>
   <button [disabled]="form.invalid" (click)="register()">REGISTER</button>
+
 </form>
