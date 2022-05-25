@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {AbstractControl, FormControl, FormGroup, ValidationErrors, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-register',
@@ -27,4 +27,12 @@ _createForm():void{
   register() {
     console.log(this.form)
   }
+
+  _checkPasswords(from:AbstractControl):ValidationErrors|null{
+  const password = from.get('password')
+    const confirmPassword = from.get('confirmPassword')
+    return password?.value === confirmPassword?.value? null:{notSame:true}
+  }
 }
+
+
