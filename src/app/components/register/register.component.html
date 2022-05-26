@@ -2,7 +2,8 @@
   <div><label>username:<input type="text" formControlName="username"></label></div>
   <div><label>password:<input type="text" formControlName="password"></label></div>
   <div><label>confirmPassword:<input type="text" formControlName="confirmPassword"></label></div>
-  <button (click)="register()">register</button>
+  {{form.errors['notSame']}}
+  <button [disabled]="form.invalid" (click)="register()">register</button>
 
 </form>
 
